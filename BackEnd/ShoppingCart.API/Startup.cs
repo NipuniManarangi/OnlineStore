@@ -30,8 +30,11 @@ namespace ShoppingCart.API
         {
             //Iject Appsettings
             //services.Configure<ApplicationSettings>(Configuration.GetSection("ApplicationSettings"));
+
             services.AddRazorPages();
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
             services.AddCors(options =>
             {
                 options.AddPolicy(
@@ -45,9 +48,10 @@ namespace ShoppingCart.API
 
 
                 );
-            //services.AddControllers();
+            
             //JWT authentication
             var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
+
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -84,18 +88,15 @@ namespace ShoppingCart.API
                 app.UseHsts();
             }
             app.UseAuthentication();
-            app.UseCors("CorsPolicy");
-         
-            //app.UseCors(builder =>
-            //builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString())
-            //.AllowAnyHeader()
 
-            //.AllowCredentials()
-            //.AllowAnyMethod());
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
+
             app.UseDefaultFiles();
+
             app.UseStaticFiles();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute("default", "{controller}/{action}/{id}");

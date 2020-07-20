@@ -25,10 +25,6 @@ namespace ShoppingCart.Data.Repositories
             table = context.Set<T>();
 
         }
-        //public T GetByEmail(object email)
-        //{
-        //    return table.Find(email);
-        //}
         public IEnumerable<T> GetAll()
         {
             return table.ToList();

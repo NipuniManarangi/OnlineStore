@@ -31,7 +31,7 @@ namespace ShoppingCart.API.Controllers
         [HttpPost("Register")]
         public OperationResult Register(UserDTO userDTO)
         {
-            //user.UserId = userDTO.UserId;
+            
             user.FirstName = userDTO.FirstName;
             user.LastName = userDTO.LastName;
             user.Email = userDTO.Email;
