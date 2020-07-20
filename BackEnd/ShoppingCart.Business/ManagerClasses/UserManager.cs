@@ -19,6 +19,7 @@ namespace ShoppingCart.Business.ManagerClasses
     {
       
         User user = new User();
+        //key used to encrypt the password
         public static string key = "asdfrtgbvcqwe@59#";
         
         /// <summary>
