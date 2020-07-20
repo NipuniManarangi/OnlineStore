@@ -1,0 +1,35 @@
+[{
+  "id": 1,
+  "name": "Dell Laptop",
+  "code": "Dell1",
+  "quantityInStock": 1,
+  "unitPrice": 120000.0000
+},
+{
+  "id": 2,
+  "name": "HP Laptop",
+  "code": "HP1",
+  "quantityInStock": 5,
+  "unitPrice": 130000.0000
+},
+{
+  "id": 3,
+  "name": "Asus Laptop",
+  "code": "Asus1",
+  "quantityInStock": 2,
+  "unitPrice": 140000.0000
+},
+{
+  "id": 4,
+  "name": "HP",
+  "code": "HP2",
+  "quantityInStock": 1,
+  "unitPrice": 150000.0000
+},
+{
+  "id": 5,
+  "name": "Dell",
+  "code": "Dell2",
+  "quantityInStock": 6,
+  "unitPrice": 180000.0000
+}]
