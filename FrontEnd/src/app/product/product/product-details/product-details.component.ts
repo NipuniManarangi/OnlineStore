@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor() { }
+  data:any;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute,private router: Router) { }
+
+  ngOnInit() {
+
+    this.route.queryParams.subscribe((params)=>{
+      console.log(params);
+      this.data = JSON.parse(params.data);
+    });
+
+  }
+  onBack(){
+    this.router.navigate(['/']);
   }
 
 }

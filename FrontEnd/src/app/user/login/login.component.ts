@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-// myform:FormGroup
 formModel={
   Email:'',
   Password:''
@@ -28,15 +27,9 @@ formModel={
     (res:any)=>{
       if(res.status==1){
         localStorage.setItem('message',res.message);
-        localStorage.setItem('firstname',res.data.firstName);
         this.router.navigateByUrl('/checkout');
         this.toastr.success('Login successful !');
-        //this.service.loggedIn.next(true);
         this.service.loginStatus.next(true);
-
-        // let userDetails = res["data"];
-        // console.log(userDetails["email"]);
-
         }
       else {
         this.toastr.error('Login failed');

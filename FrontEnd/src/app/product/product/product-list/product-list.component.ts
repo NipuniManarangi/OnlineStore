@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/product.service';
 import {IProduct} from 'src/app/product/product/IProduct';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-product-list',
@@ -8,28 +9,18 @@ import {IProduct} from 'src/app/product/product/IProduct';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  properties: Array<IProduct>;
 
-  constructor(private service:ProductService) { }
+properties: [];
 
-  ngOnInit():void {
-   // this.service.isLoggedIn;
-   this.service.getAllProducts().subscribe(
-    data=>{
-      this.properties=data;
+constructor(private service:ProductService,private http:HttpClient) { }
+
+  ngOnInit() {
+
+    return this.service.getAllProducts().toPromise().then(
+    data => {
       console.log(data);
-    },error =>{
-      console.log('httperror :');
-      console.log(error);
-    }
+      this.properties = data['data'];
+    });
 
-
-
-
-   );
-
-
-
-  }
-
+}
 }

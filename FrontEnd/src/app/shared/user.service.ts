@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 })
 export class UserService {
 
- loginStatus = new BehaviorSubject<boolean>(false);
+loginStatus = new BehaviorSubject<boolean>(false);
 private UserName = new BehaviorSubject<string>(localStorage.getItem('firstname'.toString()));
 
 
@@ -54,11 +54,11 @@ register(){
     Password:this.formModel.value.Passwords.Password,
 
   };
-  //this.loginStatus.next(true);
+
   return this.http.post(this.BaseURI+'/user/Register',body);
 }
 login(formData){
-  //this.loginStatus.next(true);
+
   return this.http.post(this.BaseURI+'/user/Login',formData);
 }
 logout(){

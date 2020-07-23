@@ -27,19 +27,6 @@ this.service.loginStatus.next(true);
 }
 else {
   this.toastr.error("user already exists!",'Registration failed');
-  // res.errors.forEach(element => {
-  // switch (element.code){
-  //     case 'DuplicateUserName':
-  //       this.toastr.error('UserName is already taken','Registration failed');
-  //       break;
-  //     default:
-  //       this.toastr.error(element.description,'Registration failed');
-  //       break;
-
-
-
-  //  }
- // });
 }
       },
       err=>{

@@ -6,6 +6,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { LoginComponent } from './user/login/login.component';
 import { ProductListComponent } from './product/product/product-list/product-list.component';
 import { CheckoutComponent } from './cart/checkout/checkout.component';
+import { ProductDetailsComponent } from './product/product/product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,10 @@ const routes: Routes = [
       }
     ]
   },
-  {path: 'checkout',component:CheckoutComponent,canActivate:[AuthGuard]}
+  {path: 'checkout',component:CheckoutComponent,canActivate:[AuthGuard]},
+  {
+    path:'productdetails',component:ProductDetailsComponent
+  }
 ];
 
 @NgModule({

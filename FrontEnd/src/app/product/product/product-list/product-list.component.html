@@ -1,5 +1,14 @@
-<div class="row">
-  <div *ngFor="let property of properties" class="shadow-lg col-sm-4 p-3">
-<app-product-card [property]="property"></app-product-card>
-</div>
+<div class = "wrapper col-md-10 offset-md-1 " >
+    <img src="assets/images/banner.jpg" class="img-responsive" >
+    <div class = "wrapper">
+      <h1> <i class="fas fa-angle-double-down"></i></h1>
+    </div>
+    <div class = "wrapper">
+      <h1> Shop with Us</h1>
+    </div>
+    <div class="row" >
+        <div *ngFor="let property of properties" class="shadow-lg col-sm-4 p-3">
+        <app-product-card [property]="property"></app-product-card>
+        </div>
+    </div>
 </div>

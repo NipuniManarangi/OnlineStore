@@ -26,15 +26,6 @@
           <a class="nav-link"routerLink="user/login" *ngIf="LoginStatus" routerLinkActive="active"  ><i class="fas fa-user-shield"></i> Login</a>
 
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link text-danger"  >{{username}}</a>
-
-
-        </li> -->
-        <!-- <li class="nav-item"  >
-          <a class="nav-link text-danger" *ngIf="{UserName$ | async} as UserName"  >{{UserName}}</a>
-
-        </li> -->
         <li class="nav-item" *ngIf="(loginStatus$ |async) as LoginStatus" >
           <a class="nav-link"routerLink=""  *ngIf="LoginStatus" routerLinkActive="active"    (click)= "onLogout()"><i class="fas fa-user-shield"></i> LogOut</a>
 
