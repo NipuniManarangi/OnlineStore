@@ -75,7 +75,9 @@ namespace ShoppingCart.API
         }
 
         
+#pragma warning disable CA1822 // Mark members as static
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+#pragma warning restore CA1822 // Mark members as static
         {
             if (env.IsDevelopment())
             {

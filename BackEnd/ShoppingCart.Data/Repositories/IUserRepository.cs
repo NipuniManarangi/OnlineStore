@@ -12,8 +12,8 @@ namespace ShoppingCart.Data.Repositories
     {
         IEnumerable<T> GetAll();
         T GetById(object id);
-        void Insert(T obj);
-        void Update(T obj);
+        void Insert(T data);
+        void Update(T data);
         void Delete(object id);
         void Save();
     }
